@@ -13,7 +13,7 @@ const useChannelDetails = (channelId) => {
         try{
           const channelDetailsPromises  = channelId.map(async (channel)=> {
             //const channelId = allVideos.snippet.channelId;
-            const data = await fetch(`${YOUTUBE_CHANNEL_API}${channel}&key=${YOUTUBE_API_KEY}`);
+            const data = await fetch(`${YOUTUBE_CHANNEL_API}${channel}`);
             if(!data.ok){
               throw new Error('Faield to fetch data');
             }

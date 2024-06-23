@@ -1,6 +1,6 @@
 import {useEffect} from 'react'
 import { useDispatch } from 'react-redux';
-import { YOUTUBE_API_KEY } from '../utils/constants';
+import { YOUTUBE_DETAILS_VIDEOS_API } from '../utils/constants';
 import { addVideoDetails } from '../utils/videoSlice';
 
 const useDetailsVideo = (searchParams) => {
@@ -10,7 +10,7 @@ const useDetailsVideo = (searchParams) => {
     useEffect(()=> {
         const fetchVideo = async () => {
           try{
-            const data = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoID}&key=${YOUTUBE_API_KEY}`);
+            const data = await fetch(`${YOUTUBE_DETAILS_VIDEOS_API}${videoID}`);
             if(!data.ok){
               throw new Error('Faield to fetch data');
             }

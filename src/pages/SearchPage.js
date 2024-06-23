@@ -17,7 +17,7 @@ const SearchPage = () => {
     const fetchResult = async ()=> {
       if(searchQuery){
         try{
-          const data = await fetch(`${YOUTUBE_SEARCH_LIST_API}${searchQuery}&key=${YOUTUBE_API_KEY}`);
+          const data = await fetch(`${YOUTUBE_SEARCH_LIST_API}${searchQuery}`);
           const response = await data.json();
           const filterResult = response.items.filter((video)=>  video.id.videoId !== undefined);
           dispatch(setSearchResult(filterResult));
