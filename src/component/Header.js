@@ -49,7 +49,7 @@ const Header = () => {
                         <MenuOutlinedIcon className="!w-6 !h-6" />
                     </button>
                     <Link to='/' onClick={resetPageUrl}>
-                        <img alt="Logo" src={VIDEOBANKLOGO} className="h-6 ml-5" />
+                        <img alt="Logo" src={VIDEOBANKLOGO} className="h-10 ml-5" />
                     </Link>
                 </div>
                 <div className="col-span-10 text-center">
