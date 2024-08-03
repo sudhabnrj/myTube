@@ -33,7 +33,7 @@ const SearchPage = () => {
       }
     };
     fetchResult();
-  }, [dispatch, searchQuery]); 
+  }, [dispatch]); 
 
   useChannelDetails(channelId);
 

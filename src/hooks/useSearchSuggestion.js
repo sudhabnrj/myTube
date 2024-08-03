@@ -28,7 +28,7 @@ const useSearchSuggestion = (searchQuery) => {
         clearTimeout(timer);
     };
 
-  }, [searchQuery, dispatch, fetchSearchResult]);
+  }, [searchQuery, dispatch]);
 
 };
 

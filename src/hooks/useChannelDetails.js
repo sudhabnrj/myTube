@@ -38,7 +38,7 @@ const useChannelDetails = (channelId) => {
         fetchChannelDetails();
       }
   
-    }, [channelId, dispatch, allVideos]);
+    }, [channelId, dispatch]);
 }
 
 export default useChannelDetails
