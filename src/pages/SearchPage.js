@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { YOUTUBE_SEARCH_LIST_API } from '../utils/constants';
+// import { YOUTUBE_SEARCH_LIST_API } from '../utils/constants';
 import { setSearchResult } from '../utils/searchSlice';
 import { Link } from 'react-router-dom';
 import SearchShimmer from '../component/SearchShimmer';
@@ -17,7 +17,7 @@ const SearchPage = () => {
     const fetchResult = async ()=> {
       if(searchQuery){
         try{
-          const data = await fetch(`${YOUTUBE_SEARCH_LIST_API}${searchQuery}`);
+          const data = await fetch(`${process.env.REACT_APP_API_URL}/api/search?query=${searchQuery}`);
           const response = await data.json();
           const filterResult = response.items.filter((video)=>  video.id.videoId !== undefined);
           dispatch(setSearchResult(filterResult));
