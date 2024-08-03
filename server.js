@@ -3,12 +3,9 @@ const fetch = require('node-fetch'); // Use the CommonJS-compatible version
 const cors = require('cors');
 
 const app = express();
+const port = 5000;
 
-// Enable CORS for all routes, restrict to Netlify domain in production
-const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' ? 'https://videobank.netlify.app/' : '*',
-};
-app.use(cors(corsOptions));
+app.use(cors()); // Enable CORS for all routes
 
 app.get('/api/search', async (req, res) => {
   const { query } = req.query;
@@ -21,5 +18,6 @@ app.get('/api/search', async (req, res) => {
   }
 });
 
-// Export the app as a function
-module.exports = app;
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
