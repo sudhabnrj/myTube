@@ -14,14 +14,14 @@ const useComments = (searchParams) => {
                 const json = await response.json();
                 // Check if comments are disabled
                 if (json.error && json.error.message === "The video identified by the videoId parameter has disabled comments.") {
-                    console.log("Comments are disabled for this video.");
+                    // console.log("Comments are disabled for this video.");
                     return;
                 }
                 dispatch(addComments(json.items));
                 //console.log(json.items);
             }
             catch(error){
-                console.log(error)
+                console.error(error);
             }
         };
 

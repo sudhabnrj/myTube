@@ -14,7 +14,7 @@ const useSearchSuggestion = (searchQuery) => {
         dispatch(setSearchSuggestionResult(data[1])); // Ensure you dispatch the correct data structure
         //console.log(data[1]);
       } catch (error) {
-        console.log('Error fetching Search result:', error);
+        console.error('Error fetching Search result:', error);
       }
     };
 

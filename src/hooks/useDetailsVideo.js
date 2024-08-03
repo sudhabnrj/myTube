@@ -11,7 +11,7 @@ const useDetailsVideo = (searchParams) => {
         const fetchVideo = async () => {
           try{
             const data = await fetch(`${YOUTUBE_DETAILS_VIDEOS_API}${videoID}`);
-            console.log(data);
+            // console.log(data);
             if(!data.ok){
               throw new Error('Faield to fetch data');
             }

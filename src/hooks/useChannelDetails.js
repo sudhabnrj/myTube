@@ -26,7 +26,7 @@ const useChannelDetails = (channelId) => {
           }, {});
 
           dispatch(setChannelDetails(channelDetailsMap));
-          console.log('channel Details', dispatch(setChannelDetails(channelDetailsMap)));
+          // console.log('channel Details', dispatch(setChannelDetails(channelDetailsMap)));
   
         }
         catch(error){

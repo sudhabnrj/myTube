@@ -25,7 +25,7 @@ const SearchPage = () => {
             return item.snippet.channelId;
           })
           setChannelId(channels);
-          console.log('channels',response.items);
+          // console.log('channels',response.items);
         }
         catch(error){
           console.error('Error fetching results:', error);
