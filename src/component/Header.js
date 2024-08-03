@@ -14,6 +14,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import { setFilterVideos } from '../utils/videoSlice';
+import VIDEOBANKLOGO from '../assets/images/videoBank-logo.png';
 
 const Header = () => {
     const navMenu = useSelector((store)=> store.app.isMenuOpen);
@@ -48,7 +49,7 @@ const Header = () => {
                         <MenuOutlinedIcon className="!w-6 !h-6" />
                     </button>
                     <Link to='/' onClick={resetPageUrl}>
-                        <img alt="Logo" src='https://upload.wikimedia.org/wikipedia/commons/3/34/YouTube_logo_%282017%29.png' className="h-6 ml-5" />
+                        <img alt="Logo" src={VIDEOBANKLOGO} className="h-6 ml-5" />
                     </Link>
                 </div>
                 <div className="col-span-10 text-center">
