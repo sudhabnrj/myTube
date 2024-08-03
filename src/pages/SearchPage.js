@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { YOUTUBE_SEARCH_LIST_API, YOUTUBE_API_KEY } from '../utils/constants';
+import { YOUTUBE_SEARCH_LIST_API } from '../utils/constants';
 import { setSearchResult } from '../utils/searchSlice';
 import { Link } from 'react-router-dom';
 import SearchShimmer from '../component/SearchShimmer';

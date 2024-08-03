@@ -23,7 +23,7 @@ const LiveChat = () => {
 
         return () => clearInterval(i);
 
-    }, []);
+    }, [dispatch]);
 
     const handleSendMessage = (e)=> {
         e.preventDefault();

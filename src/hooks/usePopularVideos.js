@@ -32,7 +32,7 @@ const usePopularVideos = () => {
 
   useEffect(() => {
     fetchVideos();
-  }, [dispatch]);
+  }, [dispatch, fetchVideos]);
 
   return { nextPageToken, fetchVideos };
 };

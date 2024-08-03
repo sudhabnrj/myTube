@@ -1,6 +1,5 @@
 import {useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { YOUTUBE_API_KEY } from '../utils/constants';
 import { setChannelDetails } from '../utils/channelSlice';
 import { YOUTUBE_CHANNEL_API } from '../utils/constants';
 
